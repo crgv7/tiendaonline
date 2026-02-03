@@ -28,11 +28,9 @@ class PublicationSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'created_at', 'updated_at', 'image_url', 'whatsapp_link']
 
     def get_image_url(self, obj):
-        """Retorna la URL completa de la imagen."""
+        """Retorna la URL relativa de la imagen (compatible con Docker/Codespaces)."""
         if obj.image:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.image.url)
+            # Retornar URL relativa para que funcione con proxy Nginx
             return obj.image.url
         return None
 
@@ -83,10 +81,8 @@ class PublicationListSerializer(serializers.ModelSerializer):
         ]
 
     def get_image_url(self, obj):
+        """Retorna la URL relativa de la imagen."""
         if obj.image:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.image.url)
             return obj.image.url
         return None
 
