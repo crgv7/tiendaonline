@@ -1,0 +1,81 @@
+# --- IDEs and OS ---
+.idea/
+.vscode/
+*.swp
+*.log
+.DS_Store
+Thumbs.db
+*.iml
+*.ipr
+*.iws
+.history/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Desktop artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Backend (Django/Python) ---
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.Python
+**/venv/
+**/env/
+**/db.sqlite3
+**/db.sqlite3-journal
+**/media/
+**/static/
+**/staticfiles/
+**/*.egg-info/
+**/*.egg
+.env
+*.pot
+*.pyc
+
+# --- Frontend (Flutter/Dart) ---
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/coverage/
+**/.metadata
+**/app.*.symbols
+**/app.*.map.json
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/.flutter-plugins-dependencies
+**/.metadata
+
+# Archivos de configuración de plataformas (Opcional, pero reduce ruido)
+# Si prefieres no ver las carpetas de compilación de escritorio:
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+**/macos/Flutter/ephemeral/
+**/*_plugin_registrant.*
+
+# --- Log / Temp ---
+*.log
+*.tmp
+*.temp
+git_status_output.txt
+
+# --- Otros ---
+node_modules/
+dist/
+bin/
+obj/
+out/
