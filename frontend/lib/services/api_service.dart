@@ -6,8 +6,9 @@ import '../models/publication.dart';
 
 /// Servicio para comunicación con la API del backend
 class ApiService {
-  // Cambiar a la IP de tu máquina para pruebas en dispositivo físico
-  static const String baseUrl = 'http://localhost:8000/api';
+  // URL relativa - funciona con proxy Nginx en Docker/Codespaces
+  // Para desarrollo local sin Docker, usar: 'http://localhost:8000/api'
+  static const String baseUrl = '/api';
   
   final FlutterSecureStorage _storage = const FlutterSecureStorage();
   
