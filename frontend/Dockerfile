@@ -1,11 +1,11 @@
 # Frontend Flutter Dockerfile
 # Etapa 1: Build Flutter Web
-FROM ghcr.io/cirruslabs/flutter:3.32.1 AS build
+FROM ghcr.io/cirruslabs/flutter:3.38.9 AS build
 
 WORKDIR /app
 
 # Copiar archivos de configuración primero (mejor cache)
-COPY pubspec.yaml pubspec.lock ./
+COPY pubspec.yaml ./
 
 # Obtener dependencias
 RUN flutter pub get
